@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'api',
+    'pharmacy'
+    
 ]
 
 MIDDLEWARE = [
@@ -68,6 +70,20 @@ CORS_ALLOW_HEADERS = [
 
 CORS_ALLOW_ALL_ORIGINS = True
 
+# Cross-Origin Resource Sharing (CORS) Settings
+
+# Set CORS_ALLOW_ALL_ORIGINS to True to allow requests from any origin (not recommended for production).
+# CORS_ALLOW_ALL_ORIGINS = False
+
+# Define specific origins that are allowed to access your API (recommended for production).
+# CORS_ALLOWED_ORIGINS = [
+#     "https://example.com",
+#     "https://anotherdomain.com",
+#     # Add more allowed origins as needed
+# ]
+
+
+
 ROOT_URLCONF = 'Django_RestAPI.urls'
 
 TEMPLATES = [
@@ -92,24 +108,24 @@ WSGI_APPLICATION = 'Django_RestAPI.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-# MySQL:
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_crud_operations',
-        'USER': 'root',
-        'PASSWORD': 'raghu',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# MySQL:
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'django_crud_operations',
+#         'USER': 'root',
+#         'PASSWORD': 'raghu',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+# }
 
 # After making this change, you can use the URL without a trailing slash in your POST request.
 APPEND_SLASH = False
