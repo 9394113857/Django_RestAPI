@@ -1,0 +1,103 @@
+open you favoure path or create any manual folder for the cloned projects before proceed futher:-
+ALt + D => Type cmd # Enter
+
+git clone --branch raghu https://github.com/9394113857/Django_RestAPI.git
+
+cd <project-directory>
+
+py -m venv django-project-env # Enter
+if you opned in vscode if asked means say:- Yes # Enter
+so environment creted now.
+
+cd .\django-project-env\
+cd .\Scripts
+.\activate
+(django-project-env) # so bracket means activated 
+
+# deactivate
+cls # To clear the screen
+cd ..
+cd ..
+dir # You will requirements.txt means you are in the <project-directory> okay
+
+# Now install requirements.txt file libraries or packages whatever you called got it.
+pip install -r .\requirements.txt  # Enter wait for some time
+
+so installed right
+
+pip list # show installed packages
+
+In the list django not installed means:-
+pip install django # This will install django
+
+Verify Django installation:
+After installation, verify that Django is installed correctly by running:
+django-admin --version
+
+pip freeze > requirements.txt
+
+py .\manage.py makemigrations
+py .\manage.py migrate
+cls
+
+py .\manage.py runserver
+(django-project-env) PS D:\angularflask472\Django_RestAPI> py .\manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2024 - 13:00:08
+Django version 5.0.6, using settings 'Django_RestAPI.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+Something like this so the projet is up and running now.
+
+Ctrl + c => Stop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

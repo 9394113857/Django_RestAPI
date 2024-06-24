@@ -84,3 +84,5 @@ Desktop.ini
 /SQLite.py
 /mobiles.db
 /db.sqlite3
+/dj
+/django-project-env 
