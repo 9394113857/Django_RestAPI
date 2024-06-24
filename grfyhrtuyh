@@ -1,0 +1,23 @@
+[33mcommit 9d98fe33f0c52ded7bfdd3c89bc2d7932fb37228[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mraghu[m[33m, [m[1;31morigin/raghu[m[33m)[m
+Author: Raghunadh Barlapudi <81347796+9394113857@users.noreply.github.com>
+Date:   Mon Jun 24 13:07:06 2024 +0530
+
+    Updated .gitignore file
+
+[33mcommit 01fa29feec857ea455555c1b1850f9ffd297beeb[m
+Author: Raghunadh Barlapudi <81347796+9394113857@users.noreply.github.com>
+Date:   Sun Jun 23 21:50:15 2024 +0530
+
+    requirements.txt added
+
+[33mcommit bc7c49a38039d1858115444c687c726088c87fcd[m
+Author: Raghunadh Barlapudi <81347796+9394113857@users.noreply.github.com>
+Date:   Sun Jun 23 21:46:37 2024 +0530
+
+    From Laptop
+
+[33mcommit b748820bab3616f2696c5548c420414361d5061d[m
+Author: Raghunadh Barlapudi <81347796+9394113857@users.noreply.github.com>
+Date:   Mon Aug 21 18:10:12 2023 +0530
+
+    Django restapi with MySQL
