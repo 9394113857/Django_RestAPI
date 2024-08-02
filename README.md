@@ -1,6 +1,11 @@
 # Django_RestAPI
-Django REST API Project
 
-[GitHub Repository - Django_RestAPI](https://github.com/9394113857/Django_RestAPI/tree/raghu)
+Welcome to the Django REST API Project!
 
-Please visit the repository to explore the project and navigate through the code.
+Explore the code and see how the project is structured:
+
+- **Branch**: [raghu](https://github.com/9394113857/Django_RestAPI/tree/raghu)
+
+Feel free to check out the branch to see the latest updates and features.
+
+[![View Project on GitHub](https://img.shields.io/badge/View_Project_on_GitHub-blue?style=for-the-badge&logo=github)](https://github.com/9394113857/Django_RestAPI/tree/raghu)
