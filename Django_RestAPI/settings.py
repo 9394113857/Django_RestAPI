@@ -10,11 +10,56 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import os
 from pathlib import Path
+import logging
+from logging.handlers import RotatingFileHandler
+from datetime import date
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Logger configuration
+# Define the base directory for logs
+logs_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'logs')
+
+# Get the current year and month
+current_year = date.today().strftime('%Y')
+current_month = date.today().strftime('%m')
+
+# Create directories for the current year and month
+year_month_dir = os.path.join(logs_dir, current_year, current_month)
+os.makedirs(year_month_dir, exist_ok=True)
+
+# Define the log file name using today's date
+log_file = os.path.join(year_month_dir, f'{date.today()}.log')
+
+# Configure logging settings
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'ERROR',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': log_file,
+            'formatter': 'verbose',
+        },
+    },
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {message}',
+            'style': '{',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    },
+}
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
