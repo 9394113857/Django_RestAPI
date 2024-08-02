@@ -8,4 +8,4 @@ Explore the code and see how the project is structured:
 
 Feel free to check out the branch to see the latest updates and features.
 
-[![View Project on GitHub](https://img.shields.io/badge/View_Project_on_GitHub-blue?style=for-the-badge&logo=github)](https://github.com/9394113857/Django_RestAPI/tree/raghu)
+[![View Project on GitHub](https://img.shields.io/badge/Branch_raghu-blue?style=for-the-badge&logo=github)](https://github.com/9394113857/Django_RestAPI/tree/raghu)
