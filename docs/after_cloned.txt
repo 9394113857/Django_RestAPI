@@ -36,7 +36,7 @@ django-admin --version
 
 pip freeze > requirements.txt
 
-py .\manage.py makemigrations
+py .\manage.py makemigrations api
 py .\manage.py migrate
 cls
 
