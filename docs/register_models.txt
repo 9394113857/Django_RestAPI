@@ -1,0 +1,17 @@
+1. First inside your Django app -> define `models.py` 
+   # Create and define your models in the `models.py` file.
+
+2. Make sure you have installed apps listed.
+   # Ensure your app is included in the `INSTALLED_APPS` setting in `settings.py`.
+
+3. So register now those models inside `<your-app>` -> `admin.py` file
+   # Register your models in the `admin.py` file to make them accessible via the Django admin interface.
+
+4. `python manage.py makemigrations <app-name>`
+   # Generate migration files based on your model definitions.
+
+5. `python manage.py migrate`
+   # Apply the migrations to update the database schema.
+
+6. `python manage.py runserver`
+   # Start the development server to view your application.

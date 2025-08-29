@@ -1,0 +1,23 @@
+# Activate virtual environment
+.\env\Scripts\activate
+
+# Install Django
+pip install django
+
+# Check Django version
+django-admin --version
+
+# Freeze requirements
+pip freeze > requirements.txt
+
+# Install Django REST framework and CORS headers
+pip install djangorestframework django-cors-headers
+
+# Make migrations for 'api' app
+py .\manage.py makemigrations api
+
+# Apply migrations
+py .\manage.py migrate
+
+# Run the development server
+py .\manage.py runserver

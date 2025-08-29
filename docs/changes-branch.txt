@@ -1,0 +1,46 @@
+---------------------Django-Code-------------------------
+
+This is the new git branch called "changes" for any kind of changes in progress okay. 
+
+
+Sample Commit Example so edit always this for every commit before confirm the commit:-
+git commit -m "Fix: Prevent reuse of old passwords during reset process
+
+1. Prevented reuse of old password during password reset
+2. Added validation to ensure the new password is different from the old password
+3. Updated form to display appropriate error message when old password is entered
+4. Adjusted error handling to show 'old password not allowed' message on the form
+5. Ensured user receives clear feedback when attempting to reuse the old password
+
+Date: 2024-11-13
+Time: 14:35"
+
+=================== Git Refined Message ============================
+
+git commit --amend -m "Feature: Enhanced Backend Django API for CRUD operations and robust error handling
+
+1. Set up the Django backend with PostgreSQL integration for managing mobile data.
+2. Developed CRUD API endpoints for:
+   - GET /api/mobiles: Retrieve all mobiles from the database.
+   - GET /api/mobiles/<id>: Retrieve mobile data by ID with detailed error handling.
+   - POST /api/mobiles: Add a new mobile with data validation and duplicate record checks.
+   - PUT /api/mobiles/<id>: Update mobile data by ID, ensuring missing resources are handled gracefully.
+   - DELETE /api/mobiles/<id>: Delete mobile data by ID with proper feedback for missing resources.
+3. Added validation for data integrity and schema adherence in POST and PUT operations.
+4. Structured JSON responses for API calls to maintain a consistent format and improved readability.
+5. Enhanced database handling to prevent resource leaks and optimize query execution.
+6. Introduced unit tests for API endpoints to ensure reliability and regression safety.
+
+Date: $(Get-Date -Format 'yyyy-MM-dd HH:mm')"
+
+
+========================
+
+
+
+ 
+
+
+
+
+

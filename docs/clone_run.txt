@@ -1,0 +1,24 @@
+# 1. Clone the specific branch 'raghu' from the GitHub repository
+git clone --branch raghu <repository-url>
+cd <repository-directory>
+
+# 2. Create a virtual environment to manage project dependencies
+python -m venv django-project-env
+
+# 3. Activate the virtual environment
+# On Windows:
+django-project-env\Scripts\activate
+# On macOS/Linux:
+source django-project-env/bin/activate
+
+# 4. Install all the required packages listed in requirements.txt
+pip install -r requirements.txt
+
+# 5. Create migration files for the 'api' app based on the changes in models
+python manage.py makemigrations api
+
+# 6. Apply the migrations to the database to reflect the changes
+python manage.py migrate
+
+# 7. Start the Django development server to run the project locally
+python manage.py runserver

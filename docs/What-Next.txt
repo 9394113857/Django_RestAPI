@@ -1,0 +1,25 @@
+1. Verify Compatibility
+Check if projects work on office and laptop systems.
+2. Document Success
+Note working integration steps.
+3. Create Simple Guide
+Summarize steps in easy-to-follow bullet points.
+
+-------------------------------------------------------------------------------
+Changes as on: 25-11-24 around 4:30 PM so these changes are finalized as of now
+-------------------------------------------------------------------------------
+1.	Alerts display messages during CRUD operations.
+2.	Options like "OK" or "Cancel" guide user actions.
+3.	Alerts provide feedback based on operation outcomes.
+4.	Finally, alerts are working to inform and guide the user throughout the process.
+------------------------------------------------------------------------------------
+
+--------------------------------------------------------------
+From office system changes as on: 29-11-24 after ---> 6:30 PM
+--------------------------------------------------------------
+1.	So logs are not added at the back-end so pending yet to be implemented so pending.
+2.	So frontend also accordingly validations part like flask yet to be implemented so pending.
+------------------------------------------------------------------------------------
+
+
+
