@@ -1,0 +1,76 @@
+# ======================================
+# Django Migration & Setup Reference
+# ======================================
+
+# 🔹 1. Activate Virtual Environment
+# (Skip if already active)
+.\env\Scripts\activate       # Windows (PowerShell/Command Prompt)
+source env/bin/activate      # Linux/Mac
+
+
+# 🔹 2. Install Dependencies
+pip install -r requirements.txt
+
+
+# 🔹 3. Check Existing Migrations
+# Shows which migrations are applied [X] and pending [ ]
+python manage.py showmigrations
+
+
+# 🔹 4. Create Migration Files (for model changes)
+# Django scans models.py and creates migration files
+python manage.py makemigrations
+python manage.py makemigrations <app_name>   # specific app
+
+
+# 🔹 5. Apply Migrations
+# Applies all unapplied migrations (built-in + custom apps)
+python manage.py migrate
+python manage.py migrate <app_name>          # specific app
+
+
+# 🔹 6. Reset / Re-run Migrations (use carefully!)
+# Reset an app's migrations (all data from that app will be wiped)
+python manage.py migrate <app_name> zero
+python manage.py makemigrations <app_name>
+python manage.py migrate <app_name>
+
+
+# 🔹 7. Fake Migration (mark applied without running SQL)
+# Use when DB schema is already in sync
+python manage.py migrate <app_name> --fake
+
+
+# 🔹 8. Create Superuser (for Django Admin Panel)
+python manage.py createsuperuser
+# Login at: http://127.0.0.1:8000/admin/
+
+
+# 🔹 9. Run Development Server
+python manage.py runserver
+# Access project at: http://127.0.0.1:8000/
+
+
+# ======================================
+# 🚀 Routine After Cloning a Project
+# ======================================
+1) pip install -r requirements.txt
+2) python manage.py makemigrations
+3) python manage.py migrate
+4) python manage.py createsuperuser   (if needed)
+5) python manage.py runserver
+
+
+# ======================================
+# ✅ Current Workflow (What You Did)
+# ======================================
+- Ran: python manage.py makemigrations api
+- Ran: python manage.py migrate api
+- Fixed: python manage.py migrate   (applied admin/auth/contenttypes/sessions)
+- Created Superuser:
+    Username: admin
+    Email: barlapudiraghunadh9@gmail.com
+- Verified with: python manage.py showmigrations
+- All migrations applied successfully ✅
+- Server running at http://127.0.0.1:8000/ ✅
+- Admin Panel accessible at http://127.0.0.1:8000/admin/ ✅

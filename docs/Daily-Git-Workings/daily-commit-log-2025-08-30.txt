@@ -1,0 +1,15 @@
+# For Django Backend (No Code Changes, but Service Integration is Working):
+# Navigate to the Django backend project directory
+cd /path/to/django-backend
+
+# Create an empty commit with a detailed message about the current status
+git commit --allow-empty -m "No code changes, but Angular frontend flow with Django service integration is fully functional.
+
+1. Frontend Components: No code changes, but frontend components are successfully integrated with the Django backend.
+2. Service Integration: The flow between Angular components and Django API is smooth and fully operational.
+3. Status: No new edits, but the Django backend system is fully tested and functional.
+
+Date: $(Get-Date -Format 'yyyy-MM-dd hh:mm tt')"
+
+# Push the commit to the 'Working-code' branch on the remote repository
+git push origin Working-code 
