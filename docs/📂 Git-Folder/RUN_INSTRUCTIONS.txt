@@ -1,0 +1,11 @@
+# Step 1: Install all required Python packages from requirements.txt
+pip install -r requirements.txt
+
+# Step 2: Create migrations if you changed models
+python manage.py makemigrations api
+
+# Step 3: Apply the migrations to the database
+python manage.py migrate api
+
+# Step 4: Start the Django development server
+python manage.py runserver

@@ -1,0 +1,4 @@
+& '.\env\Scripts\python.exe' -m pip install django-cors-headers
+
+python -m pip install djangorestframework
+
