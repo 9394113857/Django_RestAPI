@@ -18,6 +18,8 @@ pip install -r requirements.txt
 python manage.py makemigrations api
 
 # 6. Apply the migrations to the database to reflect the changes
+# python manage.py migrate api
+
 python manage.py migrate
 
 # 7. Start the Django development server to run the project locally
