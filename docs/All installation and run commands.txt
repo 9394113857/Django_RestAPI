@@ -1,0 +1,182 @@
+==============================================
+DJANGO REST API PROJECT SETUP (AFTER CLONE)
+==============================================
+
+Step 1️⃣  Open Command Prompt / PowerShell
+
+👉 Open any drive or folder where you want to store cloned projects
+Example:
+Alt + D → type cmd → Press Enter
+
+-------------------------------------------------
+
+Step 2️⃣  Clone the Repository
+
+git clone --branch raghu https://github.com/9394113857/Django_RestAPI.git
+
+-------------------------------------------------
+
+Step 3️⃣  Go Inside Project Directory
+
+cd Django_RestAPI
+
+Verify:
+dir
+
+You should see:
+- manage.py
+- requirements.txt
+- Django_RestAPI (folder)
+- api (folder)
+- docs (folder)
+
+-------------------------------------------------
+
+Step 4️⃣  Create Virtual Environment
+
+IMPORTANT: Always use "py -m venv"
+
+py -m venv django-project-env
+
+This creates a folder:
+django-project-env/
+
+-------------------------------------------------
+
+Step 5️⃣  Activate Virtual Environment
+
+Windows:
+
+.\django-project-env\Scripts\activate
+
+You should now see:
+
+(django-project-env)
+
+If activated → good 👍
+
+To deactivate later:
+deactivate
+
+-------------------------------------------------
+
+Step 6️⃣  Upgrade pip (Recommended)
+
+python -m pip install --upgrade pip
+
+-------------------------------------------------
+
+Step 7️⃣  Install Project Dependencies
+
+python -m pip install -r requirements.txt
+
+⚠️ Always use:
+python -m pip install
+NOT plain pip install
+
+-------------------------------------------------
+
+Step 8️⃣  Verify Installed Packages
+
+python -m pip list
+
+If Django is missing:
+
+python -m pip install django
+
+If djangorestframework is missing:
+
+python -m pip install djangorestframework
+
+If django-cors-headers is missing:
+
+python -m pip install django-cors-headers
+
+Verify each:
+
+python -m pip show django
+python -m pip show djangorestframework
+python -m pip show django-cors-headers
+
+Location must point to:
+
+<project-folder>\django-project-env\Lib\site-packages
+
+-------------------------------------------------
+
+Step 9️⃣  Apply Migrations
+
+python manage.py makemigrations
+python manage.py migrate
+
+If no errors → database ready ✅
+
+-------------------------------------------------
+
+Step 🔟  Run Development Server
+
+python manage.py runserver
+
+Expected Output:
+
+Watching for file changes with StatReloader
+Performing system checks...
+System check identified no issues (0 silenced).
+Django version X.X.X
+Starting development server at http://127.0.0.1:8000/
+
+Open in browser:
+http://127.0.0.1:8000/
+
+-------------------------------------------------
+
+Step 1️⃣1️⃣  Stop Server
+
+CTRL + C
+
+-------------------------------------------------
+
+Step 1️⃣2️⃣  Update requirements.txt (Optional)
+
+If you installed new packages:
+
+python -m pip freeze > requirements.txt
+
+-------------------------------------------------
+
+IMPORTANT RULES
+==============================================
+
+✔ One project = One virtual environment
+✔ Always activate venv before running project
+✔ Always use: python -m pip install
+✔ Never install Django globally for project usage
+✔ Never mix global python and virtual environment
+
+-------------------------------------------------
+
+Common Errors & Fixes
+==============================================
+
+1) ModuleNotFoundError: rest_framework
+→ Install:
+python -m pip install djangorestframework
+
+2) ModuleNotFoundError: corsheaders
+→ Install:
+python -m pip install django-cors-headers
+
+3) Wrong Python path
+Check:
+Get-Command python
+
+It must point to:
+<project>\django-project-env\Scripts\python.exe
+
+-------------------------------------------------
+
+Project is now fully set up and running 🚀
+
+==============================================
+END OF FILE
+==============================================
