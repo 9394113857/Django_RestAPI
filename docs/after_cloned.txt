@@ -9,10 +9,13 @@ py -m venv django-project-env # Enter
 if you opned in vscode if asked means say:- Yes # Enter
 so environment creted now.
 
+
 cd .\django-project-env\
 cd .\Scripts
 .\activate
 (django-project-env) # so bracket means activated 
+
+python.exe -m pip install --upgrade pip
 
 # deactivate
 cls # To clear the screen
@@ -23,16 +26,25 @@ dir # You will requirements.txt means you are in the <project-directory> okay
 # Now install requirements.txt file libraries or packages whatever you called got it.
 pip install -r .\requirements.txt  # Enter wait for some time
 
+python.exe -m pip install --upgrade pip
+
 so installed right
 
 pip list # show installed packages
 
-In the list django not installed means:-
+# In the list django not installed means:-
 pip install django # This will install django
 
-Verify Django installation:
-After installation, verify that Django is installed correctly by running:
+# Verify Django installation:
+# After installation, verify that Django is installed correctly by running:
 django-admin --version
+
+
+pip install django-cors-headers
+pip show django-cors-headers
+
+python -m pip install djangorestframework
+python -m pip show djangorestframework
 
 pip freeze > requirements.txt
 
