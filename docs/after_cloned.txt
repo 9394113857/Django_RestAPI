@@ -25,6 +25,8 @@ git pull origin Working-Code --rebase
 git push origin Working-Code
 
 git add .
+git commit -m "Django production upgrade: Supabase DB, Docker setup, env config"
+git pull origin Working-Code --rebase
 
 # Fix conflicts manually in files if any:-
 # If conflit stepos only:-
