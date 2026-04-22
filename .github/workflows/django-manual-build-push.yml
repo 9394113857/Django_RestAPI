@@ -1,0 +1,59 @@
+name: 🚀 Manual Build & Push ---> django-api
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # ==============================
+      # 📥 Checkout Working-Code Branch
+      # ==============================
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v4
+        with:
+          ref: Working-Code   # 🔥 IMPORTANT
+
+      # ==============================
+      # 🔐 Login to Docker Hub
+      # ==============================
+      - name: 🔐 Docker Login
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # ==============================
+      # 🧠 Info
+      # ==============================
+      - name: 🧠 Build Info
+        run: |
+          echo "🚀 Django Manual Build Triggered"
+          echo "📦 Image: pythoncodelife/django-api:latest"
+          echo "🌿 Branch: Working-Code"
+          echo "🕒 Time: $(date)"
+
+      # ==============================
+      # 🐳 Build Docker Image
+      # ==============================
+      - name: 🐳 Build Docker Image
+        run: |
+          docker build -t pythoncodelife/django-api:latest .
+
+      # ==============================
+      # 📤 Push Docker Image
+      # ==============================
+      - name: 📤 Push Docker Image
+        run: |
+          docker push pythoncodelife/django-api:latest
+
+      # ==============================
+      # 🎉 Done
+      # ==============================
+      - name: 🎉 Done
+        run: |
+          echo "✅ Django Docker Image pushed successfully!"
+          echo "🔗 https://hub.docker.com/r/pythoncodelife/django-api"
