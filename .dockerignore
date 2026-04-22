@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.env
+venv/
+db.sqlite3
+
+.git
+.gitignore
+.dockerignore
+
+# Project unnecessary folders
+docs/
+Django_RestAPI/logs/
+
+# Optional (extra safety)
+*.log

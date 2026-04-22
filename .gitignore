@@ -1,89 +1,60 @@
-# Byte-compiled / optimized / DLL files
+# ===============================
+# PYTHON
+# ===============================
 __pycache__/
 *.py[cod]
 *$py.class
 
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
-env/
+# ===============================
+# ENV / VENV
+# ===============================
+.env
+.env.*
 venv/
+env/
 ENV/
 env.bak/
 venv.bak/
-*.egg
-*.egg-info/
-dist/
+
+# ===============================
+# DJANGO
+# ===============================
+*.log
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+
+# ===============================
+# BUILD / DIST
+# ===============================
 build/
+dist/
+*.egg-info/
 *.whl
 
-# Django specific
-*.log
-*.pot
-*.pyc
-*.pyo
-*.pyd
-*.sqlite3
-media
-
-# Django migrations
-*/migrations/
-*.log
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
+# ===============================
+# TEST / COVERAGE
+# ===============================
 htmlcov/
 .tox/
 .nox/
 coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-.hypothesis/
-*.mochawesome.json
+.cache/
 
-# Translations
-*.mo
-
-# Static files
-staticfiles/
-static/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# PyCharm
-.idea/
-*.iml
-*.ipr
-*.iws
-
-# Environments
-.env
-.env.*
-
-# macOS
-.DS_Store
-
-# Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-
-# Visual Studio Code
+# ===============================
+# IDE
+# ===============================
 .vscode/
-.history/
+.idea/
 
-# Custom ignore files
-/SQLite.py
-/mobiles.db
-/db.sqlite3
-/dj
-/django-project-env
+# ===============================
+# OS FILES
+# ===============================
+.DS_Store
+Thumbs.db
 
+# ===============================
+# OPTIONAL (KEEP IF NOT NEEDED)
+# ===============================
+# static/   ← ❌ REMOVE THIS LINE if present

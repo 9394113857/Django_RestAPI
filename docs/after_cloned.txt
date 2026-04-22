@@ -1,3 +1,30 @@
+PS E:\Devops-projects\Django_RestAPI> taskkill /F /IM python.exe
+SUCCESS: The process "python.exe" with PID 9984 has been terminated.
+SUCCESS: The process "python.exe" with PID 13212 has been terminated.
+PS E:\Devops-projects\Django_RestAPI> 
+
+Remove-Item -Recurse -Force venv
+
+# VERIFY PYTHON (CORRECT WAY):-
+python -c "import sys; print(sys.executable)"
+
+python -m pip install -r requirements.txt
+
+python.exe -m pip install --upgrade pip
+
+pip list
+
+
+# 🔹 Command 1: Set DB URL (TEMP):-
+$env:DATABASE_URL="postgresql://postgres.klooegwymroclylinwfp:Raghunadh_1992@aws-1-ap-south-1.pooler.supabase.com:5432/postgres"
+
+python manage.py migrate
+
+
+
+
+==============================================================
+
 open you favoure path or create any manual folder for the cloned projects before proceed futher:-
 ALt + D => Type cmd # Enter
 
@@ -45,6 +72,11 @@ pip show django-cors-headers
 
 python -m pip install djangorestframework
 python -m pip show djangorestframework
+
+pip install dj-database-url
+
+# For Superbase upgrades:-
+# python manage.py migrate
 
 pip freeze > requirements.txt
 
