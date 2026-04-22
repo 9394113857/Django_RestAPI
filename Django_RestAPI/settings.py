@@ -8,9 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY
 # ===============================
 SECRET_KEY = os.getenv("SECRET_KEY", "dev-secret")
-
 DEBUG = os.getenv("DEBUG", "False") == "True"
-
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "*").split(",")
 
 # ===============================
@@ -34,7 +32,7 @@ INSTALLED_APPS = [
 # ===============================
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # IMPORTANT
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -56,12 +54,12 @@ ROOT_URLCONF = 'Django_RestAPI.urls'
 WSGI_APPLICATION = 'Django_RestAPI.wsgi.application'
 
 # ===============================
-# TEMPLATES (🔥 REQUIRED FOR ADMIN)
+# TEMPLATES (REQUIRED FOR ADMIN)
 # ===============================
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],  # optional: add BASE_DIR / "templates"
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -84,7 +82,6 @@ if DATABASE_URL:
         "default": dj_database_url.parse(DATABASE_URL)
     }
 else:
-    # ✅ LOCAL FALLBACK
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.sqlite3",
@@ -95,9 +92,8 @@ else:
 # ===============================
 # STATIC FILES
 # ===============================
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # ===============================
