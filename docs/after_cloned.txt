@@ -20,7 +20,18 @@ $env:DATABASE_URL="postgresql://postgres.klooegwymroclylinwfp:Raghunadh_1992@aws
 
 python manage.py migrate
 
+git pull origin Working-Code --rebase
 
+git push origin Working-Code
+
+git add .
+
+# Fix conflicts manually in files if any:-
+# If conflit stepos only:-
+# git add .
+# git rebase --continue
+
+# git push origin Working-Code
 
 
 ==============================================================
